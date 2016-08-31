@@ -44,19 +44,19 @@ const sampledData = sampler(data);
 
 The mode-median sampler is fairly basic. It partitions the data, then selects a representative piece of data from that set: the mode -- if it exists -- or the median.
 
-fc.**modeMedian**()
+<a name="modeMedian" href="#modeMedian">#</a> fc.**modeMedian**()
 
 Constructs a new sampler.
 
-*modeMedian*(*data*)
+<a name="modeMedian_" href="#modeMedian_">#</a> *modeMedian*(*data*)
 
 Runs the sampler. It returns the downsampled data (it doesn't modify the `data` array itself). The downsampler selects the mode (if it exists), or the median value.
 
-*modeMedian*.**value**(*accessorFunc*)
+<a name="modeMedian_value" href="#modeMedian_value">#</a> *modeMedian*.**value**(*accessorFunc*)
 
 Specifies the accessor function used to obtain the value from the supplied array of data. The accessor function is invoked exactly once per datum, and should return the value to be down-sampled.
 
-*modeMedian*.**bucketSize**(*size*)
+<a name="modeMedian_bucketSize" href="#modeMedian_bucketSize">#</a> *modeMedian*.**bucketSize**(*size*)
 
 Denotes the amount of data points for each bucket. The first and last data points are always their own bucket. The second-last bucket will be of size `(data.length - 2) % size`.
 
@@ -70,21 +70,21 @@ Largest Triangle is a sampler where, given two pre-determined points, the point 
 
 ![largest triangle one bucket illustration](largest-triangle-one-bucket.png)
 
-fc.**largestTriangleOneBucket**()
+<a name="largestTriangleOneBucket" href="#largestTriangleOneBucket">#</a> fc.**largestTriangleOneBucket**()
 
 Constructs a new sampler.
 
-*largestTriangle*(*data*)
+<a name="largestTriangle_one" href="#largestTriangle_one">#</a>*largestTriangle*(*data*)
 
 Runs the sampler, returning the downsampled data (it doesn't modify the `data` array itself). The sampler selects the point in the bucket with the largest area between two other points (determined by algorithm).
 
-*largestTriangle*.**x**(*accessorFunc*)
+<a name="largestTriangle_x_one" href="#largestTriangle_x_one">#</a> *largestTriangle*.**x**(*accessorFunc*)
 
-*largestTriangle*.**y**(*accessorFunc*)
+<a name="largestTriangle_y_one" href="#largestTriangle_y_one">#</a> *largestTriangle*.**y**(*accessorFunc*)
 
 Specifies the accessor function used to obtain the x and y values from the supplied array of data. The accessor function is invoked exactly once per datum, and should return the value to be down-sampled.
 
-*largestTriangle*.**bucketSize**(*size*)
+<a name="largestTriangle_bucketSize_one" href="#largestTriangle_bucketSize_one">#</a> *largestTriangle*.**bucketSize**(*size*)
 
 Denotes the amount of data points for each bucket. The first and last data points are always their own bucket. The second-last bucket will be of size `(data.length - 2) % size`.
 
@@ -97,21 +97,21 @@ The point used to form the triangle in the last bucket is a temporary point whic
 
 ![largest triangle three bucket illustration](largest-triangle-three-bucket.png)
 
-fc.**largestTriangleThreeBucket**()
+<a name="largestTriangleThreeBucket" href="#largestTriangleThreeBucket">#</a> fc.**largestTriangleThreeBucket**()
 
 Constructs a new sampler.
 
-*largestTriangle*(*data*)
+<a name="largestTriangle_three" href="#largestTriangle_three">#</a> *largestTriangle*(*data*)
 
 Runs the sampler, returning the downsampled data (it doesn't modify the `data` array itself). The sampler selects the point in the bucket with the largest area between two other points (determined by algorithm).
 
-*largestTriangle*.**x**(*accessorFunc*)
+<a name="largestTriangle_x_three" href="#largestTriangle_x_three">#</a> *largestTriangle*.**x**(*accessorFunc*)
 
-*largestTriangle*.**y**(*accessorFunc*)
+<a name="largestTriangle_y_three" href="#largestTriangle_y_three">#</a> *largestTriangle*.**y**(*accessorFunc*)
 
 Specifies the accessor function used to obtain the x and y values from the supplied array of data. The accessor function is invoked exactly once per datum, and should return the value to be down-sampled.
 
-*largestTriangle*.**bucketSize**(*size*)
+<a name="largestTriangle_bucketSize_three" href="#largestTriangle_bucketSize_three">#</a> *largestTriangle*.**bucketSize**(*size*)
 
 Denotes the amount of data points for each bucket. The first and last data points are always their own bucket. The second-last bucket will be of size `(data.length - 2) % size`.
 
@@ -120,11 +120,11 @@ Denotes the amount of data points for each bucket. The first and last data point
 
 d3fc-sample also comes with a data bucket utility, used by the algorithms. It partitions data into evenly-sized chunks, with the first and last bucket being their own.
 
-fc.**bucket**()
+<a name="bucket" href="#bucket">#</a> fc.**bucket**()
 
 Construct a data bucket utility instance.
 
-*bucket*(*data*)
+<a name="bucket_" href="#bucket_">#</a> *bucket*(*data*)
 
 Partitions the data into evenly sized buckets, in the form:
 
@@ -138,6 +138,6 @@ Partitions the data into evenly sized buckets, in the form:
 ]
 ```
 
-*bucket*.**bucketSize**(*size*)
+<a name="bucket_bucketSize" href="#bucket_bucketSize">#</a> *bucket*.**bucketSize**(*size*)
 
 Denotes the amount of data points for each bucket. The first and last data points are always their own bucket. The second-last bucket will be of size `(data.length - 2) % size`.
