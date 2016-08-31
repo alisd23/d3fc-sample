@@ -91,7 +91,7 @@ Denotes the amount of data points for each bucket. The first and last data point
 
 ### Largest Triangle Three Buckets
 
-> The algorithm is similar to the above, except it works with three buckets at a time and proceeds from left to right. The first point which forms the left corner of the triangle (the effective area) is always fixed as the point that was previously selected and one of the points in the middle bucket shall be selected now.
+> The algorithm is similar to the [above](#largest-triangle-one-bucket), except it works with three buckets at a time and proceeds from left to right. The first point which forms the left corner of the triangle (the effective area) is always fixed as the point that was previously selected and one of the points in the middle bucket shall be selected now.
 
 The point used to form the triangle in the last bucket is a temporary point which is the average of all other points within that bucket.
 
