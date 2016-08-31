@@ -16,6 +16,11 @@ npm install d3fc-sample
 
 ## API Reference
 
+* [Mode Median](#mode-median)
+* [Largest Triangle One Bucket](#largest-triangle-one-bucket)
+* [Largest Triangle Three Buckets](#largest-triangle-three-buckets)
+* [Bucket](#bucket)
+
 The sampling components provide an API for downsampling data. They are typically used to improve rendering performance of charts or maps when there is a significant amount of data. The data is passed to the component, which then returns a smaller downsampled array.
 
 ```javascript
